@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import BookCard from '@/components/BookCard';
 import { books } from '@/data/books';
 
@@ -11,6 +12,20 @@ export default function Home() {
       <section className="pt-32 pb-20 md:pt-40 md:pb-32 bg-cream">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
+            {/* Logo */}
+            <div className="flex justify-center mb-8">
+              <div className="relative w-24 h-24 md:w-32 md:h-32">
+                <Image
+                  src="/logo.png"
+                  alt="Safaia Publishing House Logo"
+                  width={128}
+                  height={128}
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </div>
+
             <h1 className="font-display font-normal mb-6">
               Wydawnictwo Safaia
             </h1>

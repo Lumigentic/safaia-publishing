@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Navigation() {
@@ -11,8 +12,20 @@ export default function Navigation() {
       <div className="container-wide">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-display font-semibold text-safaia-700 tracking-tight">
-            Safaia
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative w-10 h-10">
+              <Image
+                src="/logo.png"
+                alt="Safaia Publishing House"
+                width={40}
+                height={40}
+                className="object-contain"
+                priority
+              />
+            </div>
+            <span className="text-2xl font-display font-normal text-safaia-700 tracking-tight group-hover:text-safaia-600 transition-colors">
+              Safaia
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -109,13 +109,23 @@ export default function Footer() {
           <p className="text-sm text-safaia-100">
             © {new Date().getFullYear()} Wydawnictwo Safaia. Wszystkie prawa zastrzeżone.
           </p>
-          <div className="flex gap-6 text-sm text-safaia-100">
-            <Link href="/polityka-prywatnosci" className="hover:text-white transition-colors">
-              Polityka prywatności
-            </Link>
-            <Link href="/regulamin" className="hover:text-white transition-colors">
-              Regulamin
-            </Link>
+          <div className="flex flex-col md:flex-row gap-4 md:gap-6 text-sm text-safaia-100 items-center">
+            <div className="flex gap-6">
+              <Link href="/polityka-prywatnosci" className="hover:text-white transition-colors">
+                Polityka prywatności
+              </Link>
+              <Link href="/regulamin" className="hover:text-white transition-colors">
+                Regulamin
+              </Link>
+            </div>
+            <a
+              href="https://www.lumigentic.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-safaia-200 hover:text-white transition-colors text-xs"
+            >
+              Powered by Lumigentic
+            </a>
           </div>
         </div>
       </div>
