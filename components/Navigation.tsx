@@ -60,22 +60,85 @@ export default function Navigation() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu - Premium Full Screen */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
-            <div className="flex flex-col gap-4">
-              <Link href="/o-nas" className="text-sm tracking-wide text-charcoal hover:text-safaia-700 transition-colors" onClick={() => setIsOpen(false)}>
-                O NAS
-              </Link>
-              <Link href="/katalog" className="text-sm tracking-wide text-charcoal hover:text-safaia-700 transition-colors" onClick={() => setIsOpen(false)}>
-                KATALOG
-              </Link>
-              <Link href="/dla-autorow" className="text-sm tracking-wide text-charcoal hover:text-safaia-700 transition-colors" onClick={() => setIsOpen(false)}>
-                DLA AUTORÓW
-              </Link>
-              <Link href="/kontakt" className="text-sm tracking-wide text-charcoal hover:text-safaia-700 transition-colors" onClick={() => setIsOpen(false)}>
-                KONTAKT
-              </Link>
+          <div className="md:hidden fixed inset-0 top-20 bg-safaia-700 z-40 overflow-y-auto">
+            <div className="container-wide py-8">
+              <div className="grid grid-cols-1 gap-4">
+                <Link
+                  href="/o-nas"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-lg p-6 border border-white/20 transition-all duration-300"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="font-display text-xl text-white" style={{ fontWeight: 400 }}>O nas</span>
+                    <svg className="w-5 h-5 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                  <p className="text-white/70 text-sm mt-2">Poznaj historię wydawnictwa</p>
+                </Link>
+
+                <Link
+                  href="/katalog"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-lg p-6 border border-white/20 transition-all duration-300"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="font-display text-xl text-white" style={{ fontWeight: 400 }}>Katalog</span>
+                    <svg className="w-5 h-5 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                  <p className="text-white/70 text-sm mt-2">Przeglądaj nasze książki</p>
+                </Link>
+
+                <Link
+                  href="/dla-autorow"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-lg p-6 border border-white/20 transition-all duration-300"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="font-display text-xl text-white" style={{ fontWeight: 400 }}>Dla autorów</span>
+                    <svg className="w-5 h-5 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                  <p className="text-white/70 text-sm mt-2">Zgłoś swoją propozycję</p>
+                </Link>
+
+                <Link
+                  href="/kontakt"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-lg p-6 border border-white/20 transition-all duration-300"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="font-display text-xl text-white" style={{ fontWeight: 400 }}>Kontakt</span>
+                    <svg className="w-5 h-5 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                  <p className="text-white/70 text-sm mt-2">Skontaktuj się z nami</p>
+                </Link>
+              </div>
+
+              {/* Bottom Section */}
+              <div className="mt-12 pt-8 border-t border-white/20">
+                <div className="text-center">
+                  <p className="text-white/70 text-sm mb-4">Śledź nas</p>
+                  <div className="flex justify-center gap-6">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors text-sm">
+                      Instagram
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors text-sm">
+                      Facebook
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors text-sm">
+                      LinkedIn
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         )}
