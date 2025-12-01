@@ -59,11 +59,12 @@ export default function Navigation() {
             </svg>
           </button>
         </div>
+      </div>
 
-        {/* Mobile Menu - Premium Full Screen */}
-        {isOpen && (
-          <div className="md:hidden fixed inset-0 top-20 bg-safaia-700 z-40 overflow-y-auto">
-            <div className="container-wide py-8">
+      {/* Mobile Menu - Premium Full Screen */}
+      {isOpen && (
+        <div className="md:hidden fixed inset-0 top-20 bg-safaia-700 z-50 overflow-y-auto">
+          <div className="container-wide py-8">
               <div className="grid grid-cols-1 gap-4">
                 <Link
                   href="/o-nas"
@@ -142,7 +143,6 @@ export default function Navigation() {
             </div>
           </div>
         )}
-      </div>
     </nav>
   );
 }
