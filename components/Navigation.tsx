@@ -23,7 +23,7 @@ export default function Navigation() {
                 priority
               />
             </div>
-            <span className="text-2xl font-display font-normal text-safaia-700 tracking-tight group-hover:text-safaia-600 transition-colors">
+            <span className="text-2xl font-display text-safaia-700 group-hover:text-safaia-600 transition-colors" style={{ fontWeight: 400, letterSpacing: '-0.025em' }}>
               Safaia
             </span>
           </Link>
